@@ -1,0 +1,114 @@
+2026-04-15 11:49:53,452 | INFO | Dataset charge : 8950 lignes, 20 colonnes
+2026-04-15 11:49:53,502 | INFO | [Sentinelles] NaN avant=2501, NaN apres=2593 (+92 detectes). 8950 -> 8950 lignes
+2026-04-15 11:49:53,516 | INFO | [Doublons] Doublons exacts: 200, doublons trade_id: 200
+2026-04-15 11:49:53,521 | INFO | [Doublons] 8950 -> 8750 lignes (-200 supprimees)
+2026-04-15 11:49:53,555 | INFO | [Types] 0 nouvelles valeurs NaN par coercion. 8750 -> 8750 lignes
+2026-04-15 11:49:53,563 | INFO | [asset_class] Apres normalisation : {'equity': 2458, 'fx': 2258, 'derivative': 2108, 'bond': 1926}. NaN (non mappees): 0. 8750 -> 8750 lignes
+2026-04-15 11:49:53,569 | INFO | [5a] settlement < trade : 80 lignes corrigees (recalcul T+2)
+2026-04-15 11:49:53,575 | INFO | [5b] bid > ask : 120 lignes corrigees (swap bid/ask)
+2026-04-15 11:49:53,577 | INFO | [5c] mid_price recalcule sur toutes les lignes (297 etaient incoherentes)
+2026-04-15 11:49:53,580 | INFO | [5d] price hors fourchette : 150 lignes corrigees (remplace par mid_price)
+2026-04-15 11:49:53,581 | INFO | [5e] notional negatif : 40 lignes corrigees (valeur absolue)
+2026-04-15 11:49:53,584 | INFO | [5f] rating investissement + defaut : 96 lignes corrigees (rating retrogade a BBB)
+2026-04-15 11:49:53,584 | INFO | [Incoherences financieres] 8750 -> 8750 lignes
+2026-04-15 11:49:53,586 | INFO | [6] country_risk hors [0,100] : 6 -> NaN
+2026-04-15 11:49:53,586 | INFO | [6] volatility_30d hors [0.1,200] : 0 -> NaN
+2026-04-15 11:49:53,588 | INFO | [6] default_flag invalide : 0 -> NaN
+2026-04-15 11:49:53,589 | INFO | [6] quantity <= 0 : 0 -> NaN
+2026-04-15 11:49:53,589 | INFO | [Regles metier] 8750 -> 8750 lignes
+2026-04-15 11:49:53,981 | INFO | [7-IQR] notional_eur: Q1=50851.37, Q3=3553141.41, IQR=3502290.04, bornes=[-5202583.70, 8806576.47], outliers=1018
+2026-04-15 11:49:53,989 | INFO | [7-IQR] volatility_30d: Q1=24.53, Q3=64.90, IQR=40.37, bornes=[-36.03, 125.46], outliers=0
+2026-04-15 11:49:53,996 | INFO | [7-IQR] volume_j: Q1=1229950.00, Q3=3774046.25, IQR=2544096.25, bornes=[-2586194.38, 7590190.62], outliers=0
+2026-04-15 11:49:54,971 | INFO | [7-IsoForest] 263 anomalies multivariees detectees (flaggees, non supprimees)
+2026-04-15 11:49:54,972 | INFO | [Outliers] 8750 -> 8750 lignes
+2026-04-15 11:49:54,977 | INFO | [8] Taux de NaN par colonne avant imputation :
+2026-04-15 11:49:54,977 | INFO |      volatility_30d: 13.70%
+2026-04-15 11:49:54,977 | INFO |      credit_rating: 14.98%
+2026-04-15 11:49:54,977 | INFO |      country_risk: 0.34%
+2026-04-15 11:49:54,993 | INFO | [8] credit_rating : impute par mode sectoriel + flag
+2026-04-15 11:49:55,000 | INFO | [8] volatility_30d (13.7% NaN) : impute par mediane (45.51) + flag
+2026-04-15 11:49:55,003 | INFO | [8] country_risk (0.3% NaN) : impute par mediane (38.10) + flag
+2026-04-15 11:49:55,004 | INFO | [Valeurs manquantes] 8750 -> 8750 lignes
+2026-04-15 11:49:55,021 | INFO | [9] counterparty_name -> counterparty_name_hash (SHA-256 + salt)
+2026-04-15 11:49:55,041 | INFO | [9] trader_id -> trader_id_hash (SHA-256 + salt)
+2026-04-15 11:49:55,060 | INFO | [9] counterparty_id -> counterparty_id_hash (SHA-256 + salt)
+2026-04-15 11:49:55,060 | INFO | [Pseudonymisation RGPD] 8750 -> 8750 lignes. Colonnes PII supprimees : ['counterparty_name', 'trader_id', 'counterparty_id']
+2026-04-15 11:49:55,077 | INFO | [RAPPORT] DQS = 100.00% | Completude = 1.0000 | Unicite = 1.0000
+2026-04-15 11:49:55,311 | INFO | Dataset nettoye sauvegarde : tradecleanse_clean.csv
+2026-04-15 11:50:13,081 | INFO | Dataset charge : 8950 lignes, 20 colonnes
+2026-04-15 11:50:13,128 | INFO | [Sentinelles] NaN avant=2501, NaN apres=2593 (+92 detectes). 8950 -> 8950 lignes
+2026-04-15 11:50:13,139 | INFO | [Doublons] Doublons exacts: 200, doublons trade_id: 200
+2026-04-15 11:50:13,143 | INFO | [Doublons] 8950 -> 8750 lignes (-200 supprimees)
+2026-04-15 11:50:13,178 | INFO | [Types] 0 nouvelles valeurs NaN par coercion. 8750 -> 8750 lignes
+2026-04-15 11:50:13,185 | INFO | [asset_class] Apres normalisation : {'fx': 2258, 'equity': 2254, 'bond': 2130, 'derivative': 2108}. NaN (non mappees): 0. 8750 -> 8750 lignes
+2026-04-15 11:50:13,187 | INFO | [5a] settlement < trade : 80 lignes corrigees (recalcul T+2)
+2026-04-15 11:50:13,192 | INFO | [5b] bid > ask : 120 lignes corrigees (swap bid/ask)
+2026-04-15 11:50:13,193 | INFO | [5c] mid_price recalcule sur toutes les lignes (297 etaient incoherentes)
+2026-04-15 11:50:13,195 | INFO | [5d] price hors fourchette : 150 lignes corrigees (remplace par mid_price)
+2026-04-15 11:50:13,197 | INFO | [5e] notional negatif : 40 lignes corrigees (valeur absolue)
+2026-04-15 11:50:13,199 | INFO | [5f] rating investissement + defaut : 96 lignes corrigees (rating retrogade a BBB)
+2026-04-15 11:50:13,199 | INFO | [Incoherences financieres] 8750 -> 8750 lignes
+2026-04-15 11:50:13,200 | INFO | [6] country_risk hors [0,100] : 6 -> NaN
+2026-04-15 11:50:13,202 | INFO | [6] volatility_30d hors [0.1,200] : 0 -> NaN
+2026-04-15 11:50:13,203 | INFO | [6] default_flag invalide : 0 -> NaN
+2026-04-15 11:50:13,205 | INFO | [6] quantity <= 0 : 0 -> NaN
+2026-04-15 11:50:13,205 | INFO | [Regles metier] 8750 -> 8750 lignes
+2026-04-15 11:50:13,478 | INFO | [7-IQR] notional_eur: Q1=50851.37, Q3=3553141.41, IQR=3502290.04, bornes=[-5202583.70, 8806576.47], outliers=1018
+2026-04-15 11:50:13,485 | INFO | [7-IQR] volatility_30d: Q1=24.53, Q3=64.90, IQR=40.37, bornes=[-36.03, 125.46], outliers=0
+2026-04-15 11:50:13,494 | INFO | [7-IQR] volume_j: Q1=1229950.00, Q3=3774046.25, IQR=2544096.25, bornes=[-2586194.38, 7590190.62], outliers=0
+2026-04-15 11:50:14,411 | INFO | [7-IsoForest] 263 anomalies multivariees detectees (flaggees, non supprimees)
+2026-04-15 11:50:14,411 | INFO | [Outliers] 8750 -> 8750 lignes
+2026-04-15 11:50:14,416 | INFO | [8] Taux de NaN par colonne avant imputation :
+2026-04-15 11:50:14,416 | INFO |      volatility_30d: 13.70%
+2026-04-15 11:50:14,416 | INFO |      credit_rating: 14.98%
+2026-04-15 11:50:14,416 | INFO |      country_risk: 0.34%
+2026-04-15 11:50:14,427 | INFO | [8] credit_rating : impute par mode sectoriel + flag
+2026-04-15 11:50:14,435 | INFO | [8] volatility_30d (13.7% NaN) : impute par mediane (45.51) + flag
+2026-04-15 11:50:14,438 | INFO | [8] country_risk (0.3% NaN) : impute par mediane (38.10) + flag
+2026-04-15 11:50:14,440 | INFO | [Valeurs manquantes] 8750 -> 8750 lignes
+2026-04-15 11:50:14,460 | INFO | [9] counterparty_name -> counterparty_name_hash (SHA-256 + salt)
+2026-04-15 11:50:14,478 | INFO | [9] trader_id -> trader_id_hash (SHA-256 + salt)
+2026-04-15 11:50:14,498 | INFO | [9] counterparty_id -> counterparty_id_hash (SHA-256 + salt)
+2026-04-15 11:50:14,498 | INFO | [Pseudonymisation RGPD] 8750 -> 8750 lignes. Colonnes PII supprimees : ['counterparty_name', 'trader_id', 'counterparty_id']
+2026-04-15 11:50:14,516 | INFO | [RAPPORT] DQS = 100.00% | Completude = 1.0000 | Unicite = 1.0000
+2026-04-15 11:50:14,731 | INFO | Dataset nettoye sauvegarde : tradecleanse_clean.csv
+2026-04-17 15:22:50,617 | INFO | Dataset charge: 8950 lignes, 20 colonnes
+2026-04-17 15:22:50,698 | INFO | [sentinelles] NaN: 2501 -> 2593
+2026-04-17 15:22:50,710 | INFO | [doublons_trade_id] lignes: 8950 -> 8750 (-200)
+2026-04-17 15:22:50,779 | INFO | [regle] settlement < trade corrige: 80
+2026-04-17 15:22:50,785 | INFO | [regle] swap bid/ask: 120
+2026-04-17 15:22:50,789 | INFO | [regle] mid_price recalcule: 297
+2026-04-17 15:22:50,793 | INFO | [regle] price hors borne corrige: 150
+2026-04-17 15:22:50,795 | INFO | [regle] notionnel corrige: 40
+2026-04-17 15:22:50,798 | INFO | [regle] rating contradictoire corrige: 96
+2026-04-17 15:22:50,798 | INFO | [business_rules] lignes: 8750 -> 8750 (0)
+2026-04-17 15:22:50,801 | INFO | [range] country_risk hors bornes -> NaN: 6
+2026-04-17 15:22:50,803 | INFO | [range] volatility_30d hors bornes -> NaN: 0
+2026-04-17 15:22:50,831 | INFO | [impute] volatility_30d valeurs remplacees: 1199
+2026-04-17 15:22:50,837 | INFO | [impute] credit_rating valeurs remplacees: 1311
+2026-04-17 15:22:50,843 | INFO | [impute] country_risk valeurs remplacees: 30
+2026-04-17 15:22:50,844 | INFO | [imputation] lignes: 8750 -> 8750 (0)
+2026-04-17 15:22:50,880 | INFO | [pii] colonne pseudonymisee: counterparty_name
+2026-04-17 15:22:50,908 | INFO | [pii] colonne pseudonymisee: counterparty_id
+2026-04-17 15:22:50,934 | INFO | [pii] colonne pseudonymisee: trader_id
+2026-04-17 15:22:51,131 | INFO | Fichier genere: data/tradecleanse_clean.csv
+2026-04-17 15:28:37,151 | INFO | Dataset charge: 8950 lignes, 20 colonnes
+2026-04-17 15:28:37,226 | INFO | [sentinelles] NaN: 2501 -> 2593
+2026-04-17 15:28:37,235 | INFO | [doublons_trade_id] lignes: 8950 -> 8750 (-200)
+2026-04-17 15:28:37,310 | INFO | [regle] settlement < trade corrige: 80
+2026-04-17 15:28:37,314 | INFO | [regle] swap bid/ask: 120
+2026-04-17 15:28:37,319 | INFO | [regle] mid_price recalcule: 297
+2026-04-17 15:28:37,322 | INFO | [regle] price hors borne corrige: 150
+2026-04-17 15:28:37,325 | INFO | [regle] notionnel corrige: 40
+2026-04-17 15:28:37,328 | INFO | [regle] rating contradictoire corrige: 96
+2026-04-17 15:28:37,329 | INFO | [business_rules] lignes: 8750 -> 8750 (0)
+2026-04-17 15:28:37,333 | INFO | [range] country_risk hors bornes -> NaN: 6
+2026-04-17 15:28:37,338 | INFO | [range] volatility_30d hors bornes -> NaN: 0
+2026-04-17 15:28:37,367 | INFO | [impute] volatility_30d valeurs remplacees: 1199
+2026-04-17 15:28:37,374 | INFO | [impute] credit_rating valeurs remplacees: 1311
+2026-04-17 15:28:37,381 | INFO | [impute] country_risk valeurs remplacees: 30
+2026-04-17 15:28:37,384 | INFO | [imputation] lignes: 8750 -> 8750 (0)
+2026-04-17 15:28:37,419 | INFO | [pii] colonne pseudonymisee: counterparty_name
+2026-04-17 15:28:37,449 | INFO | [pii] colonne pseudonymisee: counterparty_id
+2026-04-17 15:28:37,478 | INFO | [pii] colonne pseudonymisee: trader_id
+2026-04-17 15:28:37,687 | INFO | Fichier genere: data/tradecleanse_clean.csv

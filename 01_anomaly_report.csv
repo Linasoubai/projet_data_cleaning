@@ -1,0 +1,11 @@
+regle,nb_lignes,pct_lignes
+asset_class_hors_referentiel,1792,20.02
+credit_rating_hors_referentiel,1341,14.98
+trade_id_duplique,400,4.47
+mid_price_incoherent_1pct,306,3.42
+price_hors_borne_bid_ask,270,3.02
+bid_superieur_ou_egal_ask,121,1.35
+rating_ig_en_default,97,1.08
+settlement_avant_trade,81,0.91
+notional_non_positif,42,0.47
+country_risk_hors_plage,6,0.07
