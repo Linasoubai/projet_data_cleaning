@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 variable,ks_stat,p_value,drift
 price,0.0131,0.838841,False
 volatility_30d,0.016,0.622652,False
 notional_eur,0.0235,0.173233,False
 volume_j,0.0121,0.901356,False
 country_risk,0.0153,0.674878,False
+=======
+variable,ks_stat,p_value,drift
+price,0.0131,0.838841,False
+volatility_30d,0.016,0.622652,False
+notional_eur,0.0235,0.173233,False
+volume_j,0.0121,0.901356,False
+country_risk,0.0153,0.674878,False
+>>>>>>> ac56c3d (update data-cleansing deliverables and generated outputs)
